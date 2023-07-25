@@ -16,6 +16,10 @@
 		AB2591AD2A70381F00C695DA /* EmailGroupsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2591AC2A70381F00C695DA /* EmailGroupsUITestsLaunchTests.swift */; };
 		AB2591BB2A70387100C695DA /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2591BA2A70387100C695DA /* Group.swift */; };
 		AB2591BD2A70392C00C695DA /* GroupsAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2591BC2A70392C00C695DA /* GroupsAction.swift */; };
+		AB2591C02A703A6900C695DA /* GroupsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2591BF2A703A6900C695DA /* GroupsState.swift */; };
+		AB2591C22A703A8800C695DA /* GroupsReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2591C12A703A8800C695DA /* GroupsReducer.swift */; };
+		AB2591C52A703C7300C695DA /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = AB2591C42A703C7300C695DA /* ComposableArchitecture */; };
+		AB2591C72A703CA800C695DA /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2591C62A703CA800C695DA /* Environment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +52,9 @@
 		AB2591AC2A70381F00C695DA /* EmailGroupsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailGroupsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		AB2591BA2A70387100C695DA /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		AB2591BC2A70392C00C695DA /* GroupsAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsAction.swift; sourceTree = "<group>"; };
+		AB2591BF2A703A6900C695DA /* GroupsState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsState.swift; sourceTree = "<group>"; };
+		AB2591C12A703A8800C695DA /* GroupsReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsReducer.swift; sourceTree = "<group>"; };
+		AB2591C62A703CA800C695DA /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB2591C52A703C7300C695DA /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,11 +106,13 @@
 		AB25918E2A70381D00C695DA /* EmailGroups */ = {
 			isa = PBXGroup;
 			children = (
+				AB2591BE2A703A5D00C695DA /* Redux */,
 				AB2591B92A70386100C695DA /* Model */,
 				AB25918F2A70381D00C695DA /* EmailGroupsApp.swift */,
 				AB2591912A70381D00C695DA /* ContentView.swift */,
 				AB2591932A70381E00C695DA /* Assets.xcassets */,
 				AB2591952A70381E00C695DA /* Preview Content */,
+				AB2591C62A703CA800C695DA /* Environment.swift */,
 			);
 			path = EmailGroups;
 			sourceTree = "<group>";
@@ -141,6 +151,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		AB2591BE2A703A5D00C695DA /* Redux */ = {
+			isa = PBXGroup;
+			children = (
+				AB2591BF2A703A6900C695DA /* GroupsState.swift */,
+				AB2591C12A703A8800C695DA /* GroupsReducer.swift */,
+			);
+			path = Redux;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -157,6 +176,9 @@
 			dependencies = (
 			);
 			name = EmailGroups;
+			packageProductDependencies = (
+				AB2591C42A703C7300C695DA /* ComposableArchitecture */,
+			);
 			productName = EmailGroups;
 			productReference = AB25918C2A70381D00C695DA /* EmailGroups.app */;
 			productType = "com.apple.product-type.application";
@@ -229,6 +251,9 @@
 				Base,
 			);
 			mainGroup = AB2591832A70381D00C695DA;
+			packageReferences = (
+				AB2591C32A703C7300C695DA /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = AB25918D2A70381D00C695DA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -273,7 +298,10 @@
 			files = (
 				AB2591BB2A70387100C695DA /* Group.swift in Sources */,
 				AB2591922A70381D00C695DA /* ContentView.swift in Sources */,
+				AB2591C22A703A8800C695DA /* GroupsReducer.swift in Sources */,
+				AB2591C72A703CA800C695DA /* Environment.swift in Sources */,
 				AB2591902A70381D00C695DA /* EmailGroupsApp.swift in Sources */,
+				AB2591C02A703A6900C695DA /* GroupsState.swift in Sources */,
 				AB2591BD2A70392C00C695DA /* GroupsAction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -593,6 +621,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AB2591C32A703C7300C695DA /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.56.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AB2591C42A703C7300C695DA /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB2591C32A703C7300C695DA /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AB2591842A70381D00C695DA /* Project object */;
 }
