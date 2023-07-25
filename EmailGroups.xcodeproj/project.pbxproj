@@ -14,6 +14,8 @@
 		AB2591A12A70381F00C695DA /* EmailGroupsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2591A02A70381F00C695DA /* EmailGroupsTests.swift */; };
 		AB2591AB2A70381F00C695DA /* EmailGroupsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2591AA2A70381F00C695DA /* EmailGroupsUITests.swift */; };
 		AB2591AD2A70381F00C695DA /* EmailGroupsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2591AC2A70381F00C695DA /* EmailGroupsUITestsLaunchTests.swift */; };
+		AB2591BB2A70387100C695DA /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2591BA2A70387100C695DA /* Group.swift */; };
+		AB2591BD2A70392C00C695DA /* GroupsAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2591BC2A70392C00C695DA /* GroupsAction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		AB2591A62A70381F00C695DA /* EmailGroupsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmailGroupsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB2591AA2A70381F00C695DA /* EmailGroupsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailGroupsUITests.swift; sourceTree = "<group>"; };
 		AB2591AC2A70381F00C695DA /* EmailGroupsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailGroupsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AB2591BA2A70387100C695DA /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		AB2591BC2A70392C00C695DA /* GroupsAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsAction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,7 @@
 		AB25918E2A70381D00C695DA /* EmailGroups */ = {
 			isa = PBXGroup;
 			children = (
+				AB2591B92A70386100C695DA /* Model */,
 				AB25918F2A70381D00C695DA /* EmailGroupsApp.swift */,
 				AB2591912A70381D00C695DA /* ContentView.swift */,
 				AB2591932A70381E00C695DA /* Assets.xcassets */,
@@ -125,6 +130,15 @@
 				AB2591AC2A70381F00C695DA /* EmailGroupsUITestsLaunchTests.swift */,
 			);
 			path = EmailGroupsUITests;
+			sourceTree = "<group>";
+		};
+		AB2591B92A70386100C695DA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AB2591BA2A70387100C695DA /* Group.swift */,
+				AB2591BC2A70392C00C695DA /* GroupsAction.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +271,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB2591BB2A70387100C695DA /* Group.swift in Sources */,
 				AB2591922A70381D00C695DA /* ContentView.swift in Sources */,
 				AB2591902A70381D00C695DA /* EmailGroupsApp.swift in Sources */,
+				AB2591BD2A70392C00C695DA /* GroupsAction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
