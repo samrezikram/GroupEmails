@@ -20,6 +20,12 @@
 		AB2591C22A703A8800C695DA /* GroupsReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2591C12A703A8800C695DA /* GroupsReducer.swift */; };
 		AB2591C52A703C7300C695DA /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = AB2591C42A703C7300C695DA /* ComposableArchitecture */; };
 		AB2591C72A703CA800C695DA /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2591C62A703CA800C695DA /* Environment.swift */; };
+		AB2591C92A703CEA00C695DA /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2591C82A703CE900C695DA /* Store.swift */; };
+		AB2591CC2A703D2200C695DA /* GroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2591CB2A703D2200C695DA /* GroupView.swift */; };
+		AB2591CE2A703D6C00C695DA /* MailComposerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2591CD2A703D6C00C695DA /* MailComposerView.swift */; };
+		AB2591D02A703ECD00C695DA /* GroupsViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2591CF2A703ECD00C695DA /* GroupsViewState.swift */; };
+		AB2591D22A70453500C695DA /* SecondScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2591D12A70453500C695DA /* SecondScreen.swift */; };
+		AB2591D42A70468F00C695DA /* ThirdScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2591D32A70468F00C695DA /* ThirdScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +61,12 @@
 		AB2591BF2A703A6900C695DA /* GroupsState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsState.swift; sourceTree = "<group>"; };
 		AB2591C12A703A8800C695DA /* GroupsReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsReducer.swift; sourceTree = "<group>"; };
 		AB2591C62A703CA800C695DA /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		AB2591C82A703CE900C695DA /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		AB2591CB2A703D2200C695DA /* GroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupView.swift; sourceTree = "<group>"; };
+		AB2591CD2A703D6C00C695DA /* MailComposerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailComposerView.swift; sourceTree = "<group>"; };
+		AB2591CF2A703ECD00C695DA /* GroupsViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsViewState.swift; sourceTree = "<group>"; };
+		AB2591D12A70453500C695DA /* SecondScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreen.swift; sourceTree = "<group>"; };
+		AB2591D32A70468F00C695DA /* ThirdScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,13 +118,14 @@
 		AB25918E2A70381D00C695DA /* EmailGroups */ = {
 			isa = PBXGroup;
 			children = (
+				AB2591C62A703CA800C695DA /* Environment.swift */,
+				AB2591CA2A703D1400C695DA /* Screens */,
 				AB2591BE2A703A5D00C695DA /* Redux */,
 				AB2591B92A70386100C695DA /* Model */,
 				AB25918F2A70381D00C695DA /* EmailGroupsApp.swift */,
 				AB2591912A70381D00C695DA /* ContentView.swift */,
 				AB2591932A70381E00C695DA /* Assets.xcassets */,
 				AB2591952A70381E00C695DA /* Preview Content */,
-				AB2591C62A703CA800C695DA /* Environment.swift */,
 			);
 			path = EmailGroups;
 			sourceTree = "<group>";
@@ -156,8 +169,21 @@
 			children = (
 				AB2591BF2A703A6900C695DA /* GroupsState.swift */,
 				AB2591C12A703A8800C695DA /* GroupsReducer.swift */,
+				AB2591C82A703CE900C695DA /* Store.swift */,
+				AB2591CF2A703ECD00C695DA /* GroupsViewState.swift */,
 			);
 			path = Redux;
+			sourceTree = "<group>";
+		};
+		AB2591CA2A703D1400C695DA /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				AB2591CB2A703D2200C695DA /* GroupView.swift */,
+				AB2591CD2A703D6C00C695DA /* MailComposerView.swift */,
+				AB2591D12A70453500C695DA /* SecondScreen.swift */,
+				AB2591D32A70468F00C695DA /* ThirdScreen.swift */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,8 +323,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB2591BB2A70387100C695DA /* Group.swift in Sources */,
+				AB2591D02A703ECD00C695DA /* GroupsViewState.swift in Sources */,
 				AB2591922A70381D00C695DA /* ContentView.swift in Sources */,
+				AB2591CC2A703D2200C695DA /* GroupView.swift in Sources */,
 				AB2591C22A703A8800C695DA /* GroupsReducer.swift in Sources */,
+				AB2591D22A70453500C695DA /* SecondScreen.swift in Sources */,
+				AB2591D42A70468F00C695DA /* ThirdScreen.swift in Sources */,
+				AB2591C92A703CEA00C695DA /* Store.swift in Sources */,
+				AB2591CE2A703D6C00C695DA /* MailComposerView.swift in Sources */,
 				AB2591C72A703CA800C695DA /* Environment.swift in Sources */,
 				AB2591902A70381D00C695DA /* EmailGroupsApp.swift in Sources */,
 				AB2591C02A703A6900C695DA /* GroupsState.swift in Sources */,

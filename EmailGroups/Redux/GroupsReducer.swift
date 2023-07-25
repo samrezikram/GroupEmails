@@ -34,8 +34,8 @@ let groupsReducer = Reducer<GroupsState, GroupsAction, Environment> { state, act
         return .none
 
     case let .selectGroup(group):
-        state.selectedGroup = group
-        return .none
+      state.selectedGroup = group
+      return .none
 
     case .sendEmail:
         state.isMailComposerPresented = true
